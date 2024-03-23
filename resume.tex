@@ -1,0 +1,149 @@
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip} 
+\usepackage{hologo}
+\usepackage{fontspec}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.4in, bottom=.4in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\usepackage{fontspec}
+\setmainfont{Roboto}   % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C} \Huge{Vidyadhar Gowd J} \\[6pt]
+\\
+\textcolor[HTML]{371e77}{{\href{mailto:vidyadhariitkgp@gmail.com}{{\faEnvelope} vidyadhariitkgp@gmail.com}} $|$}
+\textcolor[HTML]{371e77}{{{\faMobile} +917478022333} $|$}
+
+\textcolor[HTML]{371e77}{\href{https://github.com/vidyadhar03}{{{\raisebox{-0.05\height}{\faGithub} github.com/vidyadhar03}}} $|$}
+\textcolor[HTML]{371e77}{\href{https://vidyadhar03.github.io/Portfolio/}{{{\raisebox{-0.05\height}{\faGlobe} vidyadhar03.github.io/Portfolio/}}} $|$}
+\textcolor[HTML]{371e77}{\href{https://linkedin.com/in/vidyadhargowd/}{{{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/vidyadhargowd/}}} $|$}
+\end{tabularx}
+
+\section{Skills}
+\color[HTML]{1C033C}\textbf{Front-End Development |} ReactJS • NextJS • Recoil • JavaScript • TypeScript • Tailwind CSS • HTML • CSS \\[3pt]
+\color[HTML]{1C033C}\textbf{Back-End Development |} Express • NodeJS • PostgreSQL • MongoDB \\[3pt]
+\color[HTML]{1C033C}\textbf{Miscellaneous |} Firebase • AWS • S3 • Docker • Redis • Android Studio • Kotlin • Python\\[1pt]
+
+%Experience
+\section{Work Experience}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{Bajaj Finance Ltd, Bajaj Super App}} \hfill \color[HTML]{371e77} Aug 2020 - Aug 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Sr. Software Engineer | IT PMO}} \color[HTML]{4B28A4} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Successfully collaborated with business stakeholders and development teams to deliver 7 out of 24 critical modules in the Bajaj SuperApp, which currently boasts over 50 million active users.
+        \item Solely developed the 'Store Locator' module of the SuperApp, integrating Map-My-India map services into Android Studio using Kotlin, to enable users to easily locate all Bajaj stores on a map interface.
+        \item Took full ownership of the Credit Card Acquisition, App-In-App, and Locator modules, overseeing their journey from initial concept to successful deployment, and actively resolved customer issues by leveraging tools like UserExperior, Clevertap, and various Key Performance Indicators (KPIs).
+        \item Designed and implemented efficient data flow architectures to ensure seamless integration between frontend and backend layers, meeting and exceeding specific business requirements.
+        \item Managed GitHub branch activities for essential modules, ensuring quality and consistency by personally reviewing and testing each pull request before approval, while fostering effective collaboration with the development team.
+        \item Led the 'Engineers as Leaders' initiative, where I mentored and trained a team of five new graduates over a six-month period, facilitating their integration into the Bajaj Finserv Limited (BFL) work culture and practices.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+% Education
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{Indian Institute of Technology Kharagpur} & \hfill \color[HTML]{371e77} Aug 2016 - Jun 2020 \\
+\color[HTML]{371e77} B.Tech in Civil Engineering & \hfill \color[HTML]{4B28A4} \textit{\textbf{}} \\
+\multicolumn{2}{@{}X@{}}{}
+\end{tabularx}
+
+% Projects
+\section{Full Stack Web Development Projects}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{Mind Cache AI (2024)}} \hfill \color[HTML]{371e77} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Engineered a subscription-based web service aimed at enhancing productivity and mental clarity, leveraging the OpenAI GPT model.
+        \item Developed an AI-powered Reflection Companion, a chat interface leveraging OpenAI models to stream personalized conversations directly, utilizing WebSocket for real-time communication.
+        \item Implemented a comprehensive secure payment gateway, featuring subscription management, real-time webhook notifications, and easy cancellation, ensuring smooth and secure transactions.
+        \item Launched 'Mind Cache AI' as a self-contained SaaS platform, utilizing Firebase for frontend hosting and Railway for backend operations.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{Web Weave (2024)}} \hfill \color[HTML]{371e77} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Developed a platform that simplifies deploying React and JavaScript frontends directly using the GitHub repository URL of the project.
+        \item Implemented modular microservices dedicated to uploading, deploying, and managing requests, optimizing workflow efficiency.
+        \item Integrated AWS S3 to store project data and build artifacts, using Redis for streamlined queue management.
+\end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{ Trippy Tree (2023)}} \hfill \color[HTML]{371e77} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Designed a comprehensive e-commerce site with various product categories, add-to-cart, and checkout features, delivering a responsive user experience.
+        \item Used Firebase extensively for user authentication, store data in a real-time database, and manage hosting, paired with React.js for a dynamic frontend.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{{ Neat Code (2023)}} \hfill \color[HTML]{371e77} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Created a coding practice platform similar to Leet Code, enabling users to submit and execute code challenges.
+    \end{itemize}
+\end{minipage}
+\end{tabularx}
+
+
+\end{document}
